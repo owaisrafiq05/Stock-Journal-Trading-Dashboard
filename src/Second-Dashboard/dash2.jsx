@@ -19,7 +19,7 @@ const dash2 = () => {
   ];
 
   return (
-    <div className="min-h-[100vh] bg-[#2E313F] w-100">
+    <div className="min-h-[100vh] bg-gray-800 w-100">
       <div className="bg-blue-gray-800 p-6 rounded-lg shadow-lg flex flex-wrap gap-6">
         {cardsData.map((element, index) => {
           return <StatCard title={element.title} value="67%" streak="win" />;
@@ -29,17 +29,18 @@ const dash2 = () => {
         <StatCard title="WIN STREAK" value="2" streak="win" />
         <StatCard title="LOSS STREAK" value="1" streak="loss" />
       </div>
-      <div className="flex flex-wrap justify-center gap-5 mt-5 w-[90%] ">
-        <div className="w-[100%] md:w-[50%]  overflow-hidden ">
+        <div className="flex-col flex lg:flex-row justify-evenly align-center mt-5 w-screen">
+        <div className="bg-[#2E313F] px-4 py-8 rounded-3xl w-80% mx-auto lg:mx-0 lg:w-[45%] border-gray-700 border-2">
           <MyBarChart
             title="PERFORMANCE BY DAY OF WEEK"
             data={[-65, 59, -80, 81, -56, 55, 40]}
           />
         </div>
-        <div className="w-[100%] md:w-[50%] overflow-hidden">
-          <MyBarChart title="PERFORMANCE BY Hour" data={[81, -56, 55, 40]} />
+        <div className="bg-[#2E313F] mt-8 lg:mt-0 px-4 py-8 rounded-3xl w-80% mx-auto lg:mx-0 lg:w-[45%] border-gray-700 border-2">
+          <MyBarChart title="PERFORMANCE BY HOUR" data={[81, -56, 55, 40]} />
         </div>
-      </div>
+        </div>
+      <br />
       <Dashboard />
     </div>
   );

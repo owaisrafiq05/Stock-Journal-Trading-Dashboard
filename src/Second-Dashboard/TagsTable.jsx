@@ -40,7 +40,7 @@ const TagsTable = () => {
     ];
   
     return (
-      <div className="overflow-x-auto relative shadow-md rounded-lg mt-8 md:w-[50%]">
+      <div className="overflow-x-auto relative shadow-md rounded-lg md:w-[50%]">
         <table className="w-full text-sm text-left text-gray-400">
           <thead className="text-xs uppercase bg-[#1E1F29]">
             <tr>
@@ -69,7 +69,7 @@ const TagsTable = () => {
 
 export const Dashboard = () => {
   return (
-    <div className="p-8 bg-[#2E313F] flex flex-wrap gap-7 justify-center">
+    <div className="p-8 bg-gray-800 flex gap-7 flex-col md:flex-row sm:flex-row lg:flex-row justify-start align-start">
       <TagsTable />
       <SymbolsTable />
     </div>

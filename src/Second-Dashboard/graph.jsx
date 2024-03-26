@@ -52,7 +52,7 @@ const MyBarChart = ({ title, data }) => {
         color: 'white', // Title color
         align: 'start', // Title align to the start
         font: {
-          size: 18, // Title font size
+          size: 20, // Title font size
         },
       },
     },
@@ -60,7 +60,7 @@ const MyBarChart = ({ title, data }) => {
     maintainAspectRatio: false, // Maintain the aspect ratio
   };
   return (
-    <div > {/* Customize width, height and background color */}
+    <div className='w-[80vw] h-[30vh] lg:w-[40vw] lg:h-[30vh]'> {/* Customize width, height and background color */}
       <Bar data={chartData} options={options} />
     </div>
   );
