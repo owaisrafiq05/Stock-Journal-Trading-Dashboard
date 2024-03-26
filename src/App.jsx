@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Home from "./Home-Dashboard/home"
+import Dash2 from './Second-Dashboard/dash2'
 import './App.css'
 
 function App() {
@@ -8,6 +9,11 @@ function App() {
   return (
     <div>
       <Home/>
+
+      <br />
+      <br />
+      <br />
+      <Dash2/>
     </div>
   )
 }

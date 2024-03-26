@@ -4,7 +4,7 @@ import Hero2 from './hero2'
 
 const home = () => {
   return (
-    <div className='bg-gray-800 w-screen h-screen'>
+    <div className='bg-gray-800 w-100 h-screen'>
       <Hero1/>
       <br />
       <br />
