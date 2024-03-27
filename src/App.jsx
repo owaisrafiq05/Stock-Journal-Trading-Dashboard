@@ -10,9 +10,7 @@ function App() {
     <div>
       <Home/>
 
-      <br />
-      <br />
-      <br />
+      
       <Dash2/>
     </div>
   )

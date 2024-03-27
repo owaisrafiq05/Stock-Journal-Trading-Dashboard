@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.spacing-table table {
+    border-collapse: separate; 
+    border-spacing: 10em;
+  }
+  .spacing-table th:first-child {
+    border:1px solid white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 0;
+  }
+  
+  .spacing-table th:last-child {
+    border:1px solid white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: 0;
+  }
+  
+  .spacing-table td{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    background-color: #2E313F;
+    border-style: dashed;
+  }
+  .spacing-table th{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    background-color: #2E313F;
+    border-style: dashed;
+  }
+
+
+  .spacing-table td:first-child {
+    border:1px solid white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 0;
+  }
+
+  
+  .spacing-table td:last-child {
+    border:1px solid white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: 0;
+  }
+  .rowsMobile {
+    display: none !important;
+}
+  @media screen and (max-width: 420px) {
+    .spacing-table thead{
+      display:none;
+    }
+    .rowsDesk {
+      display: none !important;
+  }
+  .rowsMobile {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+}
+.rowsMobile  td{
+  width: 100%;
+}
+  
+  }
