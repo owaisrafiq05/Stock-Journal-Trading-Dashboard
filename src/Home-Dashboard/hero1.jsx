@@ -16,16 +16,19 @@ const hero1 = () => {
       <div className="w-[100%] lg:w-[25%] xl:w-[30%] hidden sm:flex">
         <ChartComponent />
       </div>
-      <div className="w-[98%] lg:w-[70%] xl:w-[50%] flex flex-wrap gap-3 text-[0.8rem] mt-3 justify-center">
-        <div className="flex flex-wrap gap-3 lg:gap-9 ">
-          <div className="flex flex-col gap-3">
+      <div className="w-[98%] lg:w-[70%] xl:w-[50%] flex sm:flex-wrap gap-5 sm:gap-3 text-[0.8rem] mt-3 justify-center items-center">
+        <div className="flex sm:flex-wrap gap-1 lg:gap-9  w-fit ">
+          <div className="flex flex-col gap-2 sm:gap-3 ">
             <div className=" rounded-lg w-fit flex gap-1 md:gap-3 justify-center h-fit ">
-              <div className="bg-[#2E313F] py-2 ps-2 pe-9 flex items-center gap-3 border-gray-700 border-2 rounded-full text-lg text-[#9C9FAF] font-bold">
-                WINS <span className="text-xl text-[#52CA96] font-semibold">2</span>
+              <div className=" bg-[#2E313F] sm:py-2 ps-2 pe-3 sm:pe-9 flex items-center gap-3 border-gray-700 border-2 rounded-full sm:text-lg text-[#9C9FAF] font-bold text-[0.8rem] ">
+                WINS{" "}
+                <span className="text-[0.8rem] sm:text-xl text-[#52CA96] font-semibold">
+                  2
+                </span>
               </div>
-              <div className="w-fit h-[50px] overflow-hidden">
+              <div className="w-fit h-[40px] sm:h-[50px] overflow-hidden">
                 <CircularProgressbar
-                  className="h-[100%]"
+                  className="h-[100%] hidden sm:flex"
                   value={`${percentage}`}
                   text={`${percentage}%`}
                   styles={{
@@ -55,12 +58,13 @@ const hero1 = () => {
               </div>
             </div>
             <div className=" rounded-lg w-fit flex gap-1 md:gap-3 justify-center h-fit ">
-              <div className="bg-[#2E313F] py-2 ps-2 pe-9 flex items-center gap-3 border-gray-700 border-2 rounded-full text-lg text-[#9C9FAF] font-bold">
-                LOSSES <span className="text-xl text-[#EB4B68] font-semibold">1</span>
+            <div className=" bg-[#2E313F] sm:py-2 ps-2 pe-3 sm:pe-9 flex items-center gap-3 border-gray-700 border-2 rounded-full sm:text-lg text-[#9C9FAF] font-bold text-[0.8rem] ">
+                LOSSES{" "}
+                <span className="sm:text-xl text-[#EB4B68] font-semibold">1</span>
               </div>
-              <div className="w-fit h-[50px] overflow-hidden">
+              <div className="w-fit h-[40px] sm:h-[50px] overflow-hidden">
                 <CircularProgressbar
-                  className="h-[100%]"
+                  className="h-[100%] hidden sm:flex"
                   value={`${percentage2}`}
                   text={`${percentage2}%`}
                   styles={{
@@ -86,18 +90,19 @@ const hero1 = () => {
                     },
                   }}
                 />
-                ;{/* // */}
+                {/* // */}
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="hidden sm:flex  flex-col gap-2 sm:gap-3">
             <div className=" rounded-lg w-fit flex gap-1 md:gap-3 justify-center h-fit ">
-              <div className="bg-[#2E313F] py-2 ps-2 pe-9 flex items-center gap-3 border-gray-700 border-2 rounded-full text-lg text-[#9C9FAF] font-bold">
-                OPEN <span className="text-xl text-[#52CA96] font-semibold">0</span>
+            <div className=" bg-[#2E313F] sm:py-2 ps-2 pe-3 sm:pe-9 flex items-center gap-3 border-gray-700 border-2 rounded-full sm:text-lg text-[#9C9FAF] font-bold text-[0.8rem] ">
+                OPEN{" "}
+                <span className="sm:text-xl text-[#52CA96] font-semibold">0</span>
               </div>
-              <div className="w-fit h-[50px] overflow-hidden">
+              <div className="w-fit h-[40px] sm:h-[50px] overflow-hidden">
                 <CircularProgressbar
-                  className="h-[100%]"
+                   className="h-[100%] hidden sm:flex"
                   value={`${percentage3}`}
                   text={`${percentage3}%`}
                   styles={{
@@ -123,16 +128,17 @@ const hero1 = () => {
                     },
                   }}
                 />
-                ;{/* // */}
+                {/* // */}
               </div>
             </div>
             <div className=" rounded-lg w-fit flex gap-1 md:gap-3 justify-center h-fit ">
-              <div className="bg-[#2E313F] py-2 ps-2 pe-9 flex items-center gap-3 border-gray-700 border-2 rounded-full text-lg text-[#9C9FAF] font-bold">
-                WASH <span className="text-xl text-[#52CA96] font-semibold">0</span>
+            <div className=" bg-[#2E313F] sm:py-2 ps-2 pe-3 sm:pe-9 flex items-center gap-3 border-gray-700 border-2 rounded-full sm:text-lg text-[#9C9FAF] font-bold text-[0.8rem] ">
+                WASH{" "}
+                <span className="sm:text-xl text-[#52CA96] font-semibold">0</span>
               </div>
-              <div className="w-fit h-[50px] overflow-hidden">
+              <div className="w-fit h-[40px] sm:h-[50px] overflow-hidden">
                 <CircularProgressbar
-                  className="h-[100%]"
+                   className="h-[100%] hidden sm:flex"
                   value={`${percentage4}`}
                   text={`${percentage4}%`}
                   styles={{
@@ -158,18 +164,21 @@ const hero1 = () => {
                     },
                   }}
                 />
-                ;{/* // */}
+                {/* // */}
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-3">
-            <div className=" rounded-lg w-fit flex gap-1 md:gap-3 justify-center h-fit ">
-              <div className="bg-[#2E313F] py-2 ps-2 pe-9 flex items-center gap-3 border-gray-700 border-2 rounded-full text-lg text-[#9C9FAF] font-bold">
-                AVG W<span className="text-xl text-[#52CA96] font-semibold">$146</span>
+          <div className="  flex-col  gap-1 sm:gap-3">
+            <div className=" rounded-lg w-fit flex gap-3 mb-2 sm:mb-0 md:gap-3 justify-center h-fit ">
+            <div className="bg-[#2E313F] sm:py-2 ps-2 pe-3 sm:pe-9 flex items-center gap-3 border-gray-700 border-2 rounded-full sm:text-lg text-[#9C9FAF] font-bold text-[0.8rem] ">
+                AVG W
+                <span className="sm:text-xl text-[#52CA96] font-semibold">
+                  $146
+                </span>
               </div>
-              <div className="w-fit h-[50px] overflow-hidden">
+              <div className="w-fit h-[40px] sm:h-[50px] overflow-hidden">
                 <CircularProgressbar
-                  className="h-[100%]"
+                  className="h-[100%] hidden sm:flex"
                   value={`${percentage5}`}
                   text={`${percentage5}%`}
                   styles={{
@@ -199,12 +208,15 @@ const hero1 = () => {
               </div>
             </div>
             <div className=" rounded-lg w-fit flex gap-1 md:gap-3 justify-center h-fit ">
-              <div className="bg-[#2E313F] py-2 ps-2 pe-9 flex items-center gap-3 border-gray-700 border-2 rounded-full text-lg text-[#9C9FAF] font-bold">
-                AVG L<span className="text-xl text-[#EB4B68] font-semibold">-198</span>
+            <div className=" bg-[#2E313F] sm:py-2 ps-2 pe-3 sm:pe-9 flex items-center gap-3 border-gray-700 border-2 rounded-full sm:text-lg text-[#9C9FAF] font-bold text-[0.8rem] ">
+                AVG L
+                <span className="sm:text-xl text-[#EB4B68] font-semibold">
+                  -198
+                </span>
               </div>
-              <div className="w-fit h-[50px] overflow-hidden">
+              <div className="w-fit h-[40px] sm:h-[50px] overflow-hidden">
                 <CircularProgressbar
-                  className="h-[100%]"
+                  className="h-[100%] hidden sm:flex"
                   value={`${percentage6}`}
                   text={`-${percentage6}%`}
                   styles={{
@@ -235,11 +247,15 @@ const hero1 = () => {
             </div>
           </div>
         </div>
-        <div className="p-3 border-2 border-gray-700 rounded-3xl bg-[#2E313F]">
-          <div className="text-xl text-[#9C9FAF] font-semibold">PnL</div>
-          <div className="p-3">
-            <div className="text-2xl font-semibold text-[#52CA96] text-center ">$94.00</div>
-            <div className="py-1 px-9 bg-[#52CA9633] rounded-full text-white font-semibold text-center">0.0%</div>
+        <div className="sm:p-3 border-2 border-gray-700 rounded-3xl bg-[#2E313F] h-[50%]">
+          <div className="text-xl text-[#9C9FAF] font-semibold text-center sm:text-start">PnL</div>
+          <div className=" sm:p-3">
+            <div className="text-2xl font-semibold text-[#52CA96] text-center ">
+              $94.00
+            </div>
+            <div className="py-1 px-9 bg-[#52CA9633] rounded-full text-white font-semibold text-center">
+              0.0%
+            </div>
           </div>
         </div>
       </div>
