@@ -49,9 +49,9 @@ const hero2 = () => {
   
     return (
       <div className="overflow-x-auto relative shadow-md sm:rounded-lg w-[95%] mx-auto">
-        <table className="w-full text-sm text-left text-gray-400 rounded-3xl">
-          <thead className="text-xs uppercase  text-gray-400 uppercase bg-gray-800 rounded-t-lg">
-  <tr>
+        <table className="w-full text-sm text-left text-gray-400 rounded-3xl border-separate" style={{ borderSpacing: '0 8px' }}>
+          <thead className="text-xs text-gray-400 uppercase bg-gray-800 rounded-t-lg">
+  <tr className="border border-white">
               <th scope="col" className="py-3 px-6">Date</th>
               <th scope="col" className="py-3 px-6">Symbol</th>
               <th scope="col" className="py-3 px-6">Status</th>
@@ -67,9 +67,9 @@ const hero2 = () => {
               <th scope="col" className="py-3 px-6">Return %</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="border">
             {tableData.map((item, index) => (
-              <tr key={index} className={`bg-gray-800 border-gray-700 ${index === 0 ? 'rounded-t-lg' : ''} ${index === tableData.length - 1 ? 'rounded-b-lg' : ''}`}>
+              <tr key={index} className={`border mt-3 bg-gray-800 border-gray-700 ${index === 0 ? 'rounded-t-lg' : ''} ${index === tableData.length - 1 ? 'rounded-b-lg' : ''}`}>
                 <td className="py-4 px-6">{item.date}</td>
                 <td className="py-4 px-6">{item.symbol}</td>
                 <td className="py-4 px-6">{item.status}</td>
