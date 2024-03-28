@@ -1,6 +1,5 @@
-
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
-
+import Image1 from "../../public/image1.png"
 import React, { useState } from "react";
 import {
   Box,
@@ -26,11 +25,21 @@ const style = {
   width: "auto",
   bgcolor: "rgb(31 41 55)", // This should be set to your dark theme color
   border: "none",
-  borderRadius: "8px",
+  borderRadius: "29px",
   boxShadow: 24,
   p: 4,
   color: "white", // Assuming you want white text color for the entire modal content
 };
+
+const style1 = {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "align-center",
+}
+
+const style2 = {
+  color: "white",
+}
 
 export default function TradeModal() {
 
@@ -60,15 +69,18 @@ export default function TradeModal() {
         aria-labelledby="trade-modal-title"
       >
         <Box sx={style}>
-          <Typography
+          <Box sx={style1}>
+            <Typography
             id="trade-modal-title"
             variant="h6"
             component="h2"
             sx={{ color: "white" }}
-          >
+            >
             New Trade
-          </Typography>
-
+            </Typography>
+            <Button onClick={handleClose} sx={style2}>X</Button>
+          </Box>
+          <Box sx={style1}>
           <Tabs
             value={tabValue}
             onChange={handleTabChange}
@@ -78,8 +90,9 @@ export default function TradeModal() {
             <Tab label="General" />
             <Tab label="Journal" />
           </Tabs>
+            </Box>
 
-          {tabValue === 1 && ( // This will only show the form when the 'Journal' tab is active
+          {tabValue === 0 && ( // This will only show the form when the 'Journal' tab is active
             <Box
               sx={{ display: "flex", flexDirection: "column", gap: 2, my: 2 }}
             >
@@ -93,32 +106,47 @@ export default function TradeModal() {
                     inputProps={{ "aria-label": "Without label" }}
                     sx={{
                       color: "white",
+                      marginTop:"10px",
+                      borderRadius:"50px", backgroundColor:"#3C3F4E",
                       "& .MuiSvgIcon-root": { color: "white" },
                     }}
                   >
-                    <MenuItem value="STOCK">Stock</MenuItem>
+                    <MenuItem value="STOCK" sx={{backgroundColor:"#3C3F4E", color:"white"}}>STOCK</MenuItem>
+                    <MenuItem value="OPTIONS" sx={{backgroundColor:"#3C3F4E", color:"white"}}>OPTIONS</MenuItem>
+                    <MenuItem value="CRYPTO" sx={{backgroundColor:"#3C3F4E", color:"white"}}>CRYPTO</MenuItem>
+                    <MenuItem value="FUTURE" sx={{backgroundColor:"#3C3F4E", color:"white"}}>FUTURE</MenuItem>
+                    <MenuItem value="FOREX" sx={{backgroundColor:"#3C3F4E", color:"white"}}>FOREX</MenuItem>
+                    <MenuItem value="INDEX" sx={{backgroundColor:"#3C3F4E", color:"white"}}>INDEX</MenuItem>
                     {/* Add other market options here */}
                   </Select>
                 </FormControl>
                 <FormControl fullWidth>
                   <FormLabel sx={{ color: "white" }}>Symbol</FormLabel>
-                  <Input sx={{ color: "white" }} defaultValue="AAPL" />
+                  <Input sx={{ color: "white", borderRadius:"30px", backgroundColor:"#3C3F4E", padding:"7px" }} />
                 </FormControl>
                 <FormControl fullWidth>
                   <FormLabel sx={{ color: "white" }}>Target</FormLabel>
-                  <Input sx={{ color: "white" }} placeholder="Target Price" />
+                  <Input sx={{ color: "white", borderRadius:"30px", backgroundColor:"#3C3F4E", padding:"7px" }}  />
                 </FormControl>
                 <FormControl fullWidth>
                   <FormLabel sx={{ color: "white" }}>Stop-Loss</FormLabel>
                   <Input
-                    sx={{ color: "white" }}
-                    placeholder="Stop-Loss Price"
+                    sx={{ color: "white", borderRadius:"30px", backgroundColor:"#3C3F4E", padding:"7px" }}
                   />
                 </FormControl>
               </Box>
-              <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
+              <img src={Image1} alt="" className='w-100 ml-4'/>
+              <Box sx={{ display: "flex", gap: 1.5, alignItems: "center" }}>
+                
                 <Button
                   variant="contained"
+                  sx={{backgroundColor: "red", color:"white",borderRadius:"50%", fontSize:"13px"}}
+                >
+                  X
+                </Button>
+                <Button
+                  variant="contained"
+                  sx={{backgroundColor: "#52CA96", color:"white",borderRadius:"20px", paddingX:"13px"}}
                   color={action === "BUY" ? "primary" : "secondary"}
                 >
                   {action}
@@ -129,8 +157,9 @@ export default function TradeModal() {
                   defaultValue="2024-03-28T01:04"
                   sx={{
                     width: 220,
-                    input: { color: "white" },
+                    input: { color: "white" , borderRadius:"30px", backgroundColor:"#3C3F4E", paddingX:"7px" },
                     label: { color: "white" },
+                    
                   }}
                   InputLabelProps={{
                     shrink: true,
@@ -140,40 +169,43 @@ export default function TradeModal() {
                   label="Quantity"
                   type="number"
                   defaultValue={0}
-                  sx={{ input: { color: "white" }, label: { color: "white" } }}
+                  sx={{ input: { color: "white", borderRadius:"30px", backgroundColor:"#3C3F4E", paddingX:"7px", }, label: { color: "white" } }}
                 />
                 <TextField
                   label="Price"
                   type="number"
                   defaultValue={0}
-                  sx={{ input: { color: "white" }, label: { color: "white" } }}
+                  sx={{ input: { color: "white", borderRadius:"30px", backgroundColor:"#3C3F4E", paddingX:"7px", }, label: { color: "white" } }}
                 />
                 <TextField
                   label="Fee"
                   type="number"
                   defaultValue={0}
-                  sx={{ input: { color: "white" }, label: { color: "white" } }}
+                  sx={{ input: { color: "white", borderRadius:"30px", backgroundColor:"#3C3F4E", paddingX:"7px", }, label: { color: "white" } }}
                 />
               </Box>
-              <Button onClick={handleClose} sx={{ color: "white" }}>
-                Save
+              <Button onClick={handleClose} sx={{ color: "white", width:"10%", marginX:"auto", backgroundColor:"#3C9AEF",
+                borderRadius:"70px" }}>
+                +
               </Button>
               {/* ... (previous TextField components) */}
-              <TextField
+              {/* <TextField
                 label="Fee"
                 type="number"
                 defaultValue={0}
                 sx={{ input: { color: "white" }, label: { color: "white" } }}
-              />
-              <Button onClick={handleClose} sx={{ color: "white", mt: 2 }}>
-                Save
-              </Button>
+              /> */}
+              <Box sx={{display:"flex",justifyContent:"end"}}>
+                <Button onClick={handleClose} sx={{ color: "white", mt: 2, width:"20%", backgroundColor:"#3C9AEF", borderRadius: "30px"  }}>
+                  Save
+                </Button>
+              </Box>
             </Box>
           )}
 
           {/* Add content for other tabs here if necessary */}
-          {tabValue === 0 && (
-            <Box>
+          {tabValue === 1 && (
+              <Box sx={{overflowY:"scroll", minHeight: "20vh"}}>
               <div>
                 <Button onClick={handleOpen}>New Trade</Button>
                 <Modal
@@ -182,14 +214,17 @@ export default function TradeModal() {
                   aria-labelledby="trade-modal-title"
                 >
                   <Box sx={style}>
+                  <Box sx={style1}>
                     <Typography
-                      id="trade-modal-title"
-                      variant="h6"
-                      component="h2"
-                      sx={{ color: "white" }}
+                    id="trade-modal-title"
+                    variant="h6"
+                    component="h2"
+                    sx={{ color: "white" }}
                     >
-                      New Trade
+                    New Trade
                     </Typography>
+                    <Button onClick={handleClose} sx={style2}>X</Button>
+                  </Box>
 
                     <Tabs
                       value={tabValue}
@@ -202,14 +237,18 @@ export default function TradeModal() {
                     </Tabs>
 
                     {/* Assuming this part of the UI is in the 'General' tab */}
-                    {tabValue === 0 && (
+                    {tabValue === 1 && (
                       <Box>
+                        <label htmlFor="tags">Tags: </label>
                         <TextField
                           fullWidth
-                          placeholder="Tags"
+                          multiline
                           margin="normal"
+                          minRows={2}
                           InputProps={{ style: { color: "white" } }}
+                          style={{borderRadius:"30px", backgroundColor:"#3C3F4E"}}
                         />
+                        <label htmlFor="notes">Notes: </label>
                         <TextField
                           fullWidth
                           multiline
@@ -217,6 +256,7 @@ export default function TradeModal() {
                           margin="normal"
                           minRows={3}
                           InputProps={{ style: { color: "white" } }}
+                          style={{borderRadius:"30px", backgroundColor:"#3C3F4E"}}
                         />
                         <Typography gutterBottom sx={{ color: "white" }}>
                           Confidence: {confidence}
@@ -252,12 +292,11 @@ export default function TradeModal() {
                       </Box>
                     )}
 
-                    <Button
-                      onClick={handleClose}
-                      sx={{ color: "white", mt: 2 }}
-                    >
-                      Save
-                    </Button>
+                <Box sx={{display:"flex",justifyContent:"end"}}>
+                  <Button onClick={handleClose} sx={{ color: "white", mt: 2, width:"20%", backgroundColor:"#3C9AEF", borderRadius: "30px"  }}>
+                  Save
+                  </Button>
+                </Box>
                   </Box>
                 </Modal>
               </div>
