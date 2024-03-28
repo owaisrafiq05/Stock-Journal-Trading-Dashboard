@@ -1,4 +1,6 @@
 import React from 'react';
+import { createTheme } from '@mui/material/styles';
+
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
