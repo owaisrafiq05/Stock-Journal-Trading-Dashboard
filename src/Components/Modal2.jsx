@@ -1,5 +1,6 @@
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
-import Image1 from "../../public/image1.png"
+import Image1 from "../../public/image1.png";
+import Logo from "./logo1.svg";
 import React, { useState } from "react";
 import {
   Box,
@@ -41,6 +42,11 @@ const style2 = {
   color: "white",
 }
 
+const stylebtn = {
+  backgroundColor: "#5897fb",
+  borderRadius: "50%"
+}
+
 export default function TradeModal() {
 
   const [confidence, setConfidence] = useState(5);
@@ -62,7 +68,7 @@ export default function TradeModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>New Trade</Button>
+      <Button onClick={handleOpen} sx={stylebtn}><img src={Logo} alt="" /></Button>
       <Modal
         open={open}
         onClose={handleClose}

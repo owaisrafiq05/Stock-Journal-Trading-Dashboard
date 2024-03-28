@@ -19,7 +19,7 @@ const dash2 = () => {
   ];
 
   return (
-    <div className="min-h-[100vh] bg-gray-800 border border-red-500 overflow-hidden">
+    <div className="min-h-[100vh] bg-gray-800 overflow-hidden">
       <div className=" w-[95%] bg-blue-gray-800 p-6 rounded-lg shadow-lg flex flex-wrap gap-6">
         {cardsData.map((element, index) => {
           return <StatCard title={element.title} value="67%" streak="win" />;

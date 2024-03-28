@@ -10,6 +10,7 @@ const localizer = momentLocalizer(moment);
 
 const MyCalendar = () => {
   return (
+    <div className='bg-gray-800'>
     <Container maxWidth="lg">
       <Paper elevation={3}>
         <Calendar
@@ -21,6 +22,7 @@ const MyCalendar = () => {
         />
       </Paper>
     </Container>
+    </div>
   );
 };
 

@@ -21,17 +21,21 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div>
+    <div className='overflow-hidden'>
       <Home/>
 
       
       <Dash2/>
-      <div className='w-screen'>
+      <div className='w-screen bg-gray-800 h-screen'>
       {/* <Calender/> */}
-      <BasicModal/>
+      {/* <BasicModal/> */}
+      <div className='flex gap-x-8'>
       <Modal2/>
       <DayNoteModal/>
       <NewTradeSetupModal/>
+      </div>
+      <br />
+      <br />
       <MyCalendar events={myEventsList} />
       </div>
      
