@@ -51,6 +51,7 @@
   .rowsMobile {
     display: none !important;
 }
+
   @media screen and (max-width: 420px) {
     .spacing-table thead{
       display:none;
@@ -68,3 +69,4 @@
 }
   
   }
+

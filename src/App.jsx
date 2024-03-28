@@ -5,6 +5,8 @@ import './App.css'
 import Calender from './Components/Calender'
 import BasicModal from './Components/Modal'
 import Modal2 from './Components/Modal2'
+import DayNoteModal from './Components/Modal3'
+import NewTradeSetupModal from './Components/Modal4'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,9 +18,12 @@ function App() {
       
       <Dash2/>
       <div className='w-screen'>
-      {/* <Calender/> */}
+      <Calender/>
       <BasicModal/>
       <Modal2/>
+      <DayNoteModal/>
+      <NewTradeSetupModal/>
+      
       </div>
      
     </div>
