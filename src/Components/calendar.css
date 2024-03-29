@@ -1,0 +1,93 @@
+/* Calendar.css */
+
+.rbc-calendar .rbc-month-view {
+    border: none;
+}
+
+.rbc-month-header{
+    border: none;
+    border-color: white;
+    color: #9C9FAF;
+}
+
+.MuiPaper-root .rbc-calendar{
+    position: relative;
+    margin-top: -100px;
+}
+
+.rbc-row .rbc-header{
+    border: none;
+    color: #9C9FAF;
+    background-color: rgb(31 41 55);
+}
+
+/* .rbc-row-bg{
+    border: 2px solid rgb(31 41 55);
+
+} */
+
+.rbc-month-view .rbc-header + .rbc-header {
+    border: none;
+}
+
+.rbc-row-bg .rbc-day-bg{
+    color: #9C9FAF;
+    background-color: #2E313F;
+    font-weight: bold;
+    border: 3px solid rgb(55 65 81);
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.rbc-month-view .rbc-month-row .rbc-row-bg{
+    border: none;
+}
+
+.rbc-month-row + .rbc-month-row {
+    /* border: 2px solid black; */
+    border: none;
+}
+
+.rbc-toolbar .rbc-toolbar-label {
+    color: #9C9FAF;
+    font-size: x-large;
+    background-color: #2E313F;
+    border: 3px solid rgb(55 65 81);
+    border-radius: 200px;
+    margin: 0 460px;
+}
+
+.rbc-btn-group button + button{
+    color: white;
+}
+
+.rbc-row-bg .rbc-day-bg + .rbc-day-bg {
+    border: 3px solid rgb(55 65 81);
+    background-color: #2E313F;
+    border-radius: 20px;
+    margin: 5px;
+    text-align: center;
+}
+
+
+.rbc-date-cell .rbc-button-link{
+    text-align: center;
+    color: #9C9FAF;
+    font-size: large;
+    margin-right: 67px;
+    margin-top: 15%;
+    display: inline-block;
+}
+
+.rbc-toolbar .rbc-btn-group{
+    display: none;
+}
+
+.MuiContainer-root .css-1fy71df-MuiPaper-root {
+    box-shadow: none;
+}
+
+.btn{
+    padding: 0px 28px;
+    border: 3px solid rgb(55 65 81);
+}
